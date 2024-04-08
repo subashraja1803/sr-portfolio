@@ -1,0 +1,31 @@
+@keyframes animate {
+  0% {
+    width: 0%;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+
+.home {
+  .summary {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    .imageContainer {
+      img {
+        height: 30rem;
+        width: 45rem;
+      }
+    }
+    .intro {
+      h2 {
+        position: relative;
+        font-size: 2rem;
+        // color: rgba(83, 83, 83, 0.752);
+        -webkit-text-stroke: 0.1rem rgba(66, 66, 66, 0.752);
+      }
+    }
+  }
+}

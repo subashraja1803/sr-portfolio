@@ -1,0 +1,24 @@
+.navBar {
+  border-bottom: 0.1rem solid rgb(181, 205, 209);
+  .navTitle {
+    font-family: "Daisy Days";
+    font-size: 3rem;
+    cursor: pointer;
+    background: -webkit-linear-gradient(#6260d8, #4cc0ff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &:hover {
+      background: -webkit-linear-gradient(#588fad, #06e8ef);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  .navItem {
+    font-size: 1.5rem;
+    &:hover {
+      background: -webkit-linear-gradient(#0054e6, #588fad);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
