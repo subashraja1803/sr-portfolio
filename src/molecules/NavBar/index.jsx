@@ -32,7 +32,7 @@ function NavBar() {
       <Navbar
         fixed="top"
         expand="lg"
-        className={`bg-body-tertiary ${styles.navBar}`}
+        className={`${styles.navBar}`}
         collapseOnSelect
       >
         <Container>

@@ -1,16 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Home.module.scss";
-import image from "../../assets/images/MVD02445.JPG";
+import image from "../../assets/images/SR_udupi.jpg";
+import Typewriter from "typewriter-effect";
 
 function Home() {
+  const [imageLoaded, setImageLoaded] = useState(false);
   return (
     <div className={styles.home}>
-      <div className={styles.summary}>
+      <div className={styles.profile}>
         <div className={styles.imageContainer}>
-          <img src={image} alt="Subash Raja" />
+          <img
+            className={`${styles.profileImage}`}
+            style={imageLoaded ? { opacity: 1 } : { opacity: 0 }}
+            src={image}
+            alt="Subash Raja"
+            onLoad={() => setImageLoaded(true)}
+          />
         </div>
-        <div className={styles.intro}>
-          <h2 data-text="Hi, This is Subash Raja">Hi, This is Subash Raja</h2>
+        <div className={styles.summary}>
+          <div className={styles.intro}>
+            <span>Subash Raja</span>
+            {/* <div className={styles.inputCursor}></div> */}
+          </div>
+          <div className={styles.role}>
+            <Typewriter
+              options={{
+                strings: ["A Software Developer in the making"],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </div>
         </div>
       </div>
     </div>

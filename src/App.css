@@ -15,3 +15,27 @@
   src: local("QuickKiss"),
     url("./assets/fonts/QuickKiss.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "Magical Stylish Script";
+  src: local("MagicalStylishScript"),
+    url("./assets/fonts/MagicalStylishScript.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Dimsum Week";
+  src: local("DimsumWeek"),
+    url("./assets/fonts/DimsumWeek.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Shade of Adelyne";
+  src: local("ShadeOfAdelyne"),
+    url("./assets/fonts/ShadeOfAdelyne.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lunch Fox";
+  src: local("Lunch Fox"),
+    url("./assets/fonts/Lunch\ Fox.ttf") format("truetype");
+}

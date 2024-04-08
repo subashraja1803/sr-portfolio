@@ -6,14 +6,16 @@ import { Route, Routes } from "react-router-dom";
 
 function LandingPage() {
   return (
-    <div className={styles.landingPage}>
-      <NavBar />
-      <div className={styles.displayContent}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
+    <>
+      <div className={styles.landingPage}>
+        <NavBar />
+        <div className={styles.displayContent}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
