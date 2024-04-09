@@ -10,7 +10,7 @@ function Home() {
       <div className={styles.profile}>
         <div className={styles.imageContainer}>
           <img
-            className={`${styles.profileImage}`}
+            className={styles.profileImage}
             style={imageLoaded ? { opacity: 1 } : { opacity: 0 }}
             src={image}
             alt="Subash Raja"
@@ -30,6 +30,14 @@ function Home() {
                 loop: true,
               }}
             />
+          </div>
+          <div className={styles.detail}>
+            <span>
+              Dedicated, motivated and a self-driven engineer, with a passion
+              for exploring new domains and a proven ability to adapt quickly.
+              Experienced in Frontend Development with expertise in ReactJS and
+              JavaScript.
+            </span>
           </div>
         </div>
       </div>

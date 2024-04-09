@@ -1,8 +1,8 @@
 .home {
   .profile {
     display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
     .imageContainer {
       display: flex;
       justify-content: flex-end;
@@ -14,22 +14,32 @@
       }
     }
     .summary {
+      width: 100%;
       .intro {
         display: flex;
         align-items: center;
         gap: 1rem;
         font-family: "Lunch Fox";
         font-weight: bold;
-        font-size: 5rem;
-        .inputCursor {
-          height: 4rem;
-          border-right: 0.2rem solid black;
-          animation: blink 0.5s linear infinite alternate;
+        width: fit-content;
+        cursor: pointer;
+        font-size: 10rem;
+        background: -webkit-linear-gradient(#6260d8, #4cc0ff);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        &:hover {
+          background: -webkit-linear-gradient(#588fad, #06e8ef);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
       }
       .role {
-        font-size: 5rem;
+        font-size: 3rem;
         font-family: "Courier New", Courier, monospace;
+      }
+      .detail {
+        font-family: "Lucida Sans", "Lucida Sans Regular";
+        font-size: 2rem;
       }
     }
   }
@@ -61,14 +71,72 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 1920px) {
   .home {
     .profile {
       .imageContainer {
         .profileImage {
-          position: unset;
-          height: 20rem;
+          height: 70rem;
+          width: 70rem;
+        }
+      }
+      .summary {
+        .intro {
+          font-size: 15rem;
+        }
+        .role {
+          font-size: 4.2rem;
+        }
+        .detail {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .home {
+    .profile {
+      .imageContainer {
+        .profileImage {
+          height: 30rem;
           width: 30rem;
+        }
+      }
+      .summary {
+        .intro {
+          font-size: 5rem;
+        }
+        .role {
+          font-size: 2rem;
+        }
+        .detail {
+          font-size: 1.7rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .home {
+    .profile {
+      .imageContainer {
+        .profileImage {
+          height: 15rem;
+          width: 15rem;
+        }
+      }
+      .summary {
+        .intro {
+          font-size: 3rem;
+        }
+        .role {
+          font-size: 1.2rem;
+        }
+        .detail {
+          font-size: 1rem;
         }
       }
     }
