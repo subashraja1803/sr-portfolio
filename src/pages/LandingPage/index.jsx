@@ -3,6 +3,7 @@ import styles from "./LandingPage.module.scss";
 import Home from "../Home";
 import NavBar from "../../molecules/NavBar";
 import { Route, Routes } from "react-router-dom";
+import Experience from "../Experience";
 
 function LandingPage() {
   return (
@@ -12,6 +13,7 @@ function LandingPage() {
         <div className={styles.displayContent}>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/experience" element={<Experience />} />
           </Routes>
         </div>
       </div>

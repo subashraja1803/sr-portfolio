@@ -1,4 +1,5 @@
 .home {
+  padding-top: 15rem;
   .profile {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -45,21 +46,6 @@
   }
 }
 
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 @media screen and (max-width: 1080px) {
   .home {
     .profile {
@@ -97,6 +83,7 @@
 
 @media screen and (max-width: 630px) {
   .home {
+    padding-top: 8rem;
     .profile {
       .imageContainer {
         .profileImage {

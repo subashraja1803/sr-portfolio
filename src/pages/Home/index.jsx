@@ -32,12 +32,10 @@ function Home() {
             />
           </div>
           <div className={styles.detail}>
-            <span>
-              Dedicated, motivated and a self-driven engineer, with a passion
-              for exploring new domains and a proven ability to adapt quickly.
-              Experienced in Frontend Development with expertise in ReactJS and
-              JavaScript.
-            </span>
+            Dedicated, motivated and a self-driven engineer, with a passion for
+            exploring new domains and a proven ability to adapt quickly.
+            Experienced in Frontend Development with expertise in ReactJS and
+            JavaScript.
           </div>
         </div>
       </div>
