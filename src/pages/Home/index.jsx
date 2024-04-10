@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import styles from "./Home.module.scss";
 import image from "../../assets/images/SR_udupi.jpg";
 import Typewriter from "typewriter-effect";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { IoMail } from "react-icons/io5";
 import { contactDetails } from "./ContactDetails";
 
 function Home() {
@@ -24,7 +21,6 @@ function Home() {
         <div className={styles.summary}>
           <div className={styles.intro}>
             <span>Subash Raja</span>
-            {/* <div className={styles.inputCursor}></div> */}
           </div>
           <div className={styles.role}>
             <Typewriter

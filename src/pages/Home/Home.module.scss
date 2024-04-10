@@ -1,5 +1,5 @@
 .home {
-  --profileHoverColor: #b7afba;
+  --hoverColor: #b7afba;
   padding-top: 15rem;
   .profile {
     display: grid;
@@ -9,16 +9,15 @@
       display: flex;
       justify-content: flex-end;
       .profileImage {
-        box-shadow: 0 0 2.5rem var(--profileHoverColor);
+        box-shadow: 0 0 2.5rem var(--hoverColor);
         border-radius: 50%;
         height: 50rem;
         width: 50rem;
         cursor: pointer;
         transition: opacity 1s;
         &:hover {
-          box-shadow: 0 0 2.5rem var(--profileHoverColor),
-            0 0 5rem var(--profileHoverColor),
-            0 0 10rem var(--profileHoverColor);
+          box-shadow: 0 0 2.5rem var(--hoverColor), 0 0 5rem var(--hoverColor),
+            0 0 10rem var(--hoverColor);
         }
       }
     }
@@ -31,7 +30,7 @@
         display: flex;
         align-items: center;
         gap: 1rem;
-        font-family: "Lunch Fox";
+        font-family: "Shade of Adelyne";
         font-weight: bold;
         width: fit-content;
         cursor: pointer;
@@ -60,11 +59,9 @@
         gap: 4rem;
         flex-wrap: wrap;
         .contactIcon {
-          --shadowColor: #5e3c92ab;
           color: #5e3c92ab;
           &:hover {
-            box-shadow: 0 0 1.5rem var(--shadowColor),
-              0 0 3rem var(--shadowColor);
+            box-shadow: 0 0 1.5rem var(--hoverColor), 0 0 3rem var(--hoverColor);
           }
         }
       }
