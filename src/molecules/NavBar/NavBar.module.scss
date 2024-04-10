@@ -1,6 +1,6 @@
 .navBar {
   padding: 2rem;
-  padding-left: 5rem;
+  padding-left: 3rem;
   position: fixed;
   height: 5rem;
   width: 100%;
@@ -10,14 +10,14 @@
     font-weight: bolder;
     cursor: pointer;
     &:hover {
-      box-shadow: 0 0 2.5rem #b7afba;
+      box-shadow: 0 0 2.5rem #593362;
     }
   }
 }
 
 .navDrawer {
   :global([class*="ant-drawer-body"]) {
-    background-color: rgb(200, 194, 202);
+    background-color: rgba(146, 132, 156, 0.653);
   }
   .topContainer {
     height: 2rem;
@@ -43,7 +43,7 @@
       border-radius: 1rem;
       cursor: pointer;
       &:hover {
-        --navItemColor: #b7afba;
+        --navItemColor: #765b79cc;
         color: whitesmoke;
         box-shadow: 0 0 2.5rem var(--navItemColor), 0 0 5rem var(--navItemColor);
         // background: rgb(108, 59, 116);

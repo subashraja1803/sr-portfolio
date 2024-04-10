@@ -20,19 +20,21 @@ function Experience() {
           {experienceDetails.map(
             ({ role, timePeriod, company, location, description }) => (
               <VerticalTimelineElement date={timePeriod} icon={<FaBriefcase />}>
-                <h3 className="vertical-timeline-element--title">{role}</h3>
-                <h2 className="vertical-timeline-element--subtitle">{`${company} | ${location}`}</h2>
-                {description.map((desc) => (
-                  <p
-                    style={{
-                      display: "grid",
-                      gap: "1rem",
-                      gridTemplateColumns: "1fr 20fr",
-                    }}
-                  >
-                    <FcCheckmark style={{ fontSize: "1.5rem" }} /> {desc}
-                  </p>
-                ))}
+                <div className={styles.timelineElement}>
+                  <h3 className="vertical-timeline-element--title">{role}</h3>
+                  <h2 className="vertical-timeline-element--subtitle">{`${company} | ${location}`}</h2>
+                  {description.map((desc) => (
+                    <p
+                      style={{
+                        display: "grid",
+                        gap: "1rem",
+                        gridTemplateColumns: "1fr 20fr",
+                      }}
+                    >
+                      <FcCheckmark style={{ fontSize: "1.5rem" }} /> {desc}
+                    </p>
+                  ))}
+                </div>
               </VerticalTimelineElement>
             )
           )}
@@ -44,19 +46,20 @@ function Experience() {
           {educationDetails.map(
             ({ courseName, year, department, institution, customIcon }) => (
               <VerticalTimelineElement
-                className="vertical-timeline-element--education"
                 date={year}
                 icon={customIcon ? customIcon : <FaBook />}
               >
-                <h3 className="vertical-timeline-element--title">
-                  {courseName}
-                </h3>
-                <h2 className="vertical-timeline-element--subtitle">
-                  {department}
-                </h2>
-                <h2 className="vertical-timeline-element--subtitle">
-                  {institution}
-                </h2>
+                <div className={styles.timelineElement}>
+                  <h3 className="vertical-timeline-element--title">
+                    {courseName}
+                  </h3>
+                  <h2 className="vertical-timeline-element--subtitle">
+                    {department}
+                  </h2>
+                  <h2 className="vertical-timeline-element--subtitle">
+                    {institution}
+                  </h2>
+                </div>
               </VerticalTimelineElement>
             )
           )}

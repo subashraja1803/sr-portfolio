@@ -39,7 +39,12 @@ function Home() {
           </div>
           <div className={styles.contactIcons}>
             {contactDetails.map(({ icon, link }) => (
-              <a href={link} className={styles.contactIcon}>
+              <a
+                href={link}
+                target="_blank"
+                rel="noreferrer"
+                className={styles.contactIcon}
+              >
                 {icon}
               </a>
             ))}
