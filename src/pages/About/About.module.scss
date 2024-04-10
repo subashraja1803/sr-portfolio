@@ -1,0 +1,76 @@
+.aboutPage {
+  width: 100%;
+  .subHeader {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .tag {
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    cursor: default;
+  }
+  @mixin flexCenter {
+    display: flex;
+    row-gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .skillsSection {
+    .skills {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      .languages {
+        .languagesList {
+          @include flexCenter();
+          .tag {
+            --shadow: rgba(196, 78, 196, 0.427);
+            box-shadow: 0 0 2rem var(--shadow);
+            &:hover {
+              box-shadow: 0 0 2rem var(--shadow), 0 0 5rem var(--shadow);
+            }
+          }
+        }
+      }
+      .frameworks {
+        .frameworksList {
+          @include flexCenter();
+          .tag {
+            --shadow: rgba(102, 198, 198, 0.807);
+            box-shadow: 0 0 2rem var(--shadow);
+            &:hover {
+              box-shadow: 0 0 2rem var(--shadow), 0 0 5rem var(--shadow);
+            }
+          }
+        }
+      }
+      .databases {
+        .databasesList {
+          @include flexCenter();
+          .tag {
+            --shadow: rgba(206, 120, 83, 0.812);
+            box-shadow: 0 0 2rem var(--shadow);
+            &:hover {
+              box-shadow: 0 0 2rem var(--shadow), 0 0 5rem var(--shadow);
+            }
+          }
+        }
+      }
+      .others {
+        .othersList {
+          @include flexCenter();
+          .tag {
+            --shadow: rgba(77, 61, 198, 0.845);
+            box-shadow: 0 0 2rem var(--shadow);
+            &:hover {
+              box-shadow: 0 0 2rem var(--shadow), 0 0 5rem var(--shadow);
+            }
+          }
+        }
+      }
+    }
+  }
+  .extraCurricularSection {
+  }
+}
