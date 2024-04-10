@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import styles from "./Home.module.scss";
 import image from "../../assets/images/SR_udupi.jpg";
 import Typewriter from "typewriter-effect";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { IoMail } from "react-icons/io5";
+import { contactDetails } from "./ContactDetails";
 
 function Home() {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -36,6 +40,13 @@ function Home() {
             exploring new domains and a proven ability to adapt quickly.
             Experienced in Frontend Development with expertise in ReactJS and
             JavaScript.
+          </div>
+          <div className={styles.contactIcons}>
+            {contactDetails.map(({ icon, link }) => (
+              <a href={link} className={styles.contactIcon}>
+                {icon}
+              </a>
+            ))}
           </div>
         </div>
       </div>

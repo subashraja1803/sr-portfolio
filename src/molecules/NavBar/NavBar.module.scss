@@ -9,6 +9,9 @@
     color: rgb(34, 1, 84);
     font-weight: bolder;
     cursor: pointer;
+    &:hover {
+      box-shadow: 0 0 2.5rem #b7afba;
+    }
   }
 }
 
@@ -40,8 +43,10 @@
       border-radius: 1rem;
       cursor: pointer;
       &:hover {
+        --navItemColor: #b7afba;
         color: whitesmoke;
-        background: darkcyan;
+        box-shadow: 0 0 2.5rem var(--navItemColor), 0 0 5rem var(--navItemColor);
+        // background: rgb(108, 59, 116);
       }
     }
   }
