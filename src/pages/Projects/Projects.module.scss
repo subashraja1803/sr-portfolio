@@ -1,5 +1,5 @@
 .projectPage {
-  --shadowColor: #b7afba;
+  --shadowColor: #594276b1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,9 +18,9 @@
       gap: 1rem;
       border: 0.2rem solid #8a53a783;
       border-radius: 3rem;
-      background: #a59ea866;
+      background: #7862824f;
       &:hover {
-        background: #ecd8d4;
+        background: #5f448d7c;
         box-shadow: 0 0 2.5rem var(--shadowColor), 0 0 5rem var(--shadowColor);
       }
       .title {
@@ -42,17 +42,20 @@
         gap: 1rem;
         .link {
           font-size: 1.3rem;
-          border: 1px solid #0d1788c2;
+          border: 1px solid #b7b7b9c2;
           border-radius: 1rem;
           width: fit-content;
           padding: 0.5rem;
           &:hover {
             color: #ffffff;
-            background-color: #9f9f9f;
+            background-color: #a5a1a197;
             box-shadow: 0 0 5rem var(--shadowColor);
+            a {
+              color: white;
+            }
           }
           a {
-            color: #3e3e3e;
+            color: #b7b7b9c2;
             font-weight: bold;
             text-decoration: none;
             display: flex;

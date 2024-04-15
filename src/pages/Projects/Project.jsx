@@ -13,7 +13,7 @@ function Project({ details }) {
       {tech?.length && (
         <div className={styles.technologies}>
           {tech.map((t) => (
-            <Tag color="#033599c1" className={styles.tag}>
+            <Tag color="#11c8ecd4" className={styles.tag}>
               {t}
             </Tag>
           ))}
