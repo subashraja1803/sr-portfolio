@@ -20,12 +20,22 @@ export const educationDetails = [
 
 export const experienceDetails = [
   {
-    role: "Associate Product Developer",
-    company: "Lumel Technologies LLP",
-    timePeriod: "11/2023 – Present",
+    role: "Senior Software Engineer",
+    company: "Altimetrik",
+    timePeriod: "05/2025 – Present",
     location: "Chennai",
     description: [
       "Contributed a major part in Canvas Rendering of the Inforiver Matrix, a data visualisation Power BI application which contains a lot of data visualisation tools for creating and visualisation of data. This helps in improving the performance of the application by 150%.",
+    ],
+  },
+  {
+    role: "Associate Product Developer",
+    company: "Lumel Technologies LLP",
+    timePeriod: "11/2023 – 04/2025",
+    location: "Chennai",
+    description: [
+      "Contributed to development of Canvas Rendering of Inforiver Matrix which enhanced the performance by 150%.",
+      "Developed the core and 50% of the features of Inforiver Super Filter, which succeeded as the primary marketing component of Inforiver Products.",
     ],
   },
   {
