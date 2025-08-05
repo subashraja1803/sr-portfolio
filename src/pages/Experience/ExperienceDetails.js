@@ -25,7 +25,7 @@ export const experienceDetails = [
     timePeriod: "05/2025 – Present",
     location: "Chennai",
     description: [
-      "worked in Samusng Contributed to the development of Shop CMS which is used to manage contents for Samsung Mobile Shop App",
+      "Contributed to the development of Shop CMS which is used to manage contents for Samsung Mobile Shop App",
     ],
   },
   {
