@@ -25,7 +25,7 @@ export const experienceDetails = [
     timePeriod: "05/2025 – Present",
     location: "Chennai",
     description: [
-      "Contributed to the development of Shop CMS which is used to manage contents for Samsung Mobile Shop App",
+      "Contributed to development of SHOP CMS which is an internal tool in Samsung particularly designed to manage contents in Samsung Mobile Shop App across various country stores",
     ],
   },
   {
