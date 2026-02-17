@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./LandingPage.module.scss";
 import Home from "../Home";
 import NavBar from "../../molecules/NavBar";
+import Footer from "../../molecules/Footer";
 import { Route, Routes } from "react-router-dom";
 import Experience from "../Experience";
 import Projects from "../Projects";
@@ -21,6 +22,7 @@ function LandingPage() {
           </Routes>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

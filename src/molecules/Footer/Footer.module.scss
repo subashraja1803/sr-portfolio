@@ -1,0 +1,128 @@
+.footer {
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.9) 0%,
+    rgba(15, 23, 42, 0.95) 100%
+  );
+  border-top: 1px solid rgba(0, 217, 255, 0.2);
+  color: #cbd5e1;
+  padding: 4rem 2rem 2rem;
+  margin-top: 8rem;
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+
+    .section {
+      h3 {
+        font-size: 1.5rem;
+        color: #f1f5f9;
+        margin-bottom: 0.8rem;
+        background: linear-gradient(135deg, #00d9ff 0%, #0ea5e9 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      h4 {
+        font-size: 1.1rem;
+        color: #f1f5f9;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      p {
+        line-height: 1.6;
+        font-size: 0.95rem;
+      }
+
+      ul {
+        list-style: none;
+
+        li {
+          margin-bottom: 0.8rem;
+
+          a {
+            color: #cbd5e1;
+            transition: all 0.3s ease;
+
+            &:hover {
+              color: #00d9ff;
+              padding-left: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .socialLinks {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+
+    .link {
+      font-size: 1.8rem;
+      color: #cbd5e1;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #00d9ff;
+        transform: translateY(-5px);
+        filter: drop-shadow(0 0 8px rgba(0, 217, 255, 0.5));
+      }
+    }
+  }
+
+  .divider {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(0, 217, 255, 0.2),
+      transparent
+    );
+    margin: 2rem 0;
+  }
+
+  .bottom {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 0 0;
+    font-size: 0.9rem;
+
+    p {
+      margin: 0.5rem 0;
+
+      .heart {
+        color: #ff6b6b;
+        animation: heartbeat 1.5s ease-in-out infinite;
+      }
+    }
+  }
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 3rem 1.5rem 1.5rem;
+    margin-top: 4rem;
+
+    .content {
+      gap: 2rem;
+    }
+  }
+}

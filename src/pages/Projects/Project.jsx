@@ -8,12 +8,15 @@ function Project({ details }) {
     details;
   return (
     <div className={styles.project}>
-      <div className={styles.title}>{title}</div>
-      <div className={styles.description}>{description}</div>
+      <div className={styles.header}>
+        <h3 className={styles.title}>{title}</h3>
+        {inDevelopment && <div className={styles.badge}>In Development</div>}
+      </div>
+      <p className={styles.description}>{description}</p>
       {tech?.length && (
         <div className={styles.technologies}>
           {tech.map((t) => (
-            <Tag color="#11c8ecd4" className={styles.tag}>
+            <Tag key={t} className={styles.tag}>
               {t}
             </Tag>
           ))}
@@ -30,12 +33,9 @@ function Project({ details }) {
         {deploymentURL && (
           <div className={styles.link}>
             <a href={deploymentURL} target="_blank" rel="noreferrer">
-              Check it out <BsArrowUpRightSquare />
+              Live Demo <BsArrowUpRightSquare />
             </a>
           </div>
-        )}
-        {inDevelopment && (
-          <div className={styles.inDevelopment}>In Development</div>
         )}
       </div>
     </div>

@@ -2,13 +2,36 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 5rem;
-  font-family: "Dimsum Week";
+  font-size: 3rem;
+  font-weight: 700;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   padding: 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   width: 100%;
+  background: linear-gradient(135deg, #00d9ff 0%, #0ea5e9 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  letter-spacing: -0.5px;
 }
 
 .borderBottom {
-  border-bottom: 2px solid grey;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #00d9ff, transparent);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
 }

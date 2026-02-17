@@ -12,14 +12,14 @@ export const contactDetails = [
     icon: <FaGithub />,
     link: "https://github.com/subashraja1803",
   },
-  {
-    name: "X",
-    icon: <FaXTwitter />,
-    link: "https://twitter.com/SubashRaja1803",
-  },
-  {
-    name: "Email",
-    icon: <IoMail />,
-    link: "mailto:subashraja2001@gmail.com",
-  },
+  // {
+  //   name: "X",
+  //   icon: <FaXTwitter />,
+  //   link: "https://twitter.com/SubashRaja1803",
+  // },
+  // {
+  //   name: "Email",
+  //   icon: <IoMail />,
+  //   link: "mailto:subashraja2001@gmail.com",
+  // },
 ];

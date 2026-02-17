@@ -1,23 +1,35 @@
 .home {
-  --hoverColor: teal;
-  padding-top: 15rem;
+  --hoverColor: #00d9ff;
+  --accentColor: #0ea5e9;
+  padding-top: 8rem;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   .profile {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8rem;
+    gap: 6rem;
+    align-items: center;
+    max-width: 1400px;
+    width: 100%;
     .imageContainer {
       display: flex;
       justify-content: flex-end;
       .profileImage {
-        box-shadow: 0 0 2.5rem var(--hoverColor);
-        border-radius: 50%;
-        height: 50rem;
-        width: 50rem;
+        border-radius: 20px;
+        height: 45rem;
+        width: 45rem;
         cursor: pointer;
-        transition: opacity 1s;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        object-fit: cover;
+        border: 3px solid var(--hoverColor);
+        box-shadow: 0 20px 60px rgba(0, 217, 255, 0.2);
         &:hover {
-          box-shadow: 0 0 2.5rem var(--hoverColor), 0 0 5rem var(--hoverColor),
-            0 0 10rem var(--hoverColor);
+          transform: translateY(-10px);
+          box-shadow:
+            0 30px 80px rgba(0, 217, 255, 0.4),
+            0 0 30px rgba(0, 217, 255, 0.3);
         }
       }
     }
@@ -25,43 +37,112 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 2rem;
+      padding-left: 2rem;
       .intro {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        font-family: "Shade of Adelyne";
-        font-weight: bold;
-        width: fit-content;
-        cursor: pointer;
-        font-size: 10rem;
-        background: -webkit-linear-gradient(#908ef6, #eeeeee);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 800;
+        font-size: 4rem;
+        line-height: 1.1;
+        background: linear-gradient(
+          135deg,
+          #00d9ff 0%,
+          #0ea5e9 50%,
+          #06b6d4 100%
+        );
         background-clip: text;
         -webkit-text-fill-color: transparent;
+        margin: 0;
+        letter-spacing: -1px;
         &:hover {
-          background: -webkit-linear-gradient(#fbfbfb, #01c0fa);
+          background: linear-gradient(
+            135deg,
+            #0ea5e9 0%,
+            #00d9ff 50%,
+            #0284c7 100%
+          );
           background-clip: text;
           -webkit-text-fill-color: transparent;
         }
       }
       .role {
-        font-size: 3rem;
+        font-size: 1.8rem;
         font-family: "Courier New", Courier, monospace;
+        font-weight: 600;
+        color: #00d9ff;
+        letter-spacing: 2px;
+        min-height: 3rem;
       }
       .detail {
-        font-family: "Lucida Sans", "Lucida Sans Regular";
-        font-size: 2rem;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+          sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #cbd5e1;
+        max-width: 500px;
+        font-weight: 400;
+      }
+      .cta {
+        display: inline-flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        padding-top: 1rem;
+        .ctaButton {
+          padding: 1rem 2rem;
+          border: 2px solid transparent;
+          border-radius: 8px;
+          font-size: 1rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          text-decoration: none;
+          display: inline-block;
+          &.primary {
+            background: linear-gradient(135deg, #00d9ff 0%, #0ea5e9 100%);
+            color: #0f172a;
+            border-color: #00d9ff;
+            &:hover {
+              transform: translateY(-3px);
+              box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
+            }
+          }
+          &.secondary {
+            background: #0ea5e9;
+            color: #0f172a;
+            border-color: #0ea5e9;
+            &:hover {
+              background: #00d9ff;
+              transform: translateY(-3px);
+              box-shadow: 0 10px 25px rgba(0, 217, 255, 0.25);
+            }
+          }
+          &.tertiary {
+            background: transparent;
+            color: var(--hoverColor);
+            border-color: var(--hoverColor);
+            &:hover {
+              background: rgba(0, 217, 255, 0.1);
+              transform: translateY(-3px);
+              box-shadow: 0 8px 20px rgba(0, 217, 255, 0.15);
+            }
+          }
+        }
       }
       .contactIcons {
-        padding-top: 2rem;
-        font-size: 3rem;
+        padding-top: 1rem;
+        font-size: 2.5rem;
         display: flex;
-        gap: 4rem;
+        gap: 3rem;
         flex-wrap: wrap;
         .contactIcon {
-          color: #f2f0f4ab;
+          color: #94a3b8;
+          transition: all 0.3s ease;
+          cursor: pointer;
           &:hover {
-            box-shadow: 0 0 1.5rem var(--hoverColor), 0 0 3rem var(--hoverColor);
+            color: var(--hoverColor);
+            transform: translateY(-5px);
+            filter: drop-shadow(0 0 10px rgba(0, 217, 255, 0.5));
           }
         }
       }
@@ -69,53 +150,46 @@
   }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1200px) {
+  .home {
+    padding-top: 6rem;
+    .profile {
+      gap: 3rem;
+      .imageContainer {
+        .profileImage {
+          height: 35rem;
+          width: 35rem;
+        }
+      }
+      .summary {
+        padding-left: 0;
+        .intro {
+          font-size: 3rem;
+        }
+        .role {
+          font-size: 1.5rem;
+        }
+        .detail {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
   .home {
     .profile {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 2rem;
       align-items: center;
-    }
-  }
-}
-
-@media screen and (max-width: 1340px) {
-  .home {
-    .profile {
-      .summary {
-        .intro {
-          font-size: 8rem;
-        }
-        .role {
-          font-size: 2rem;
-        }
-        .detail {
-          font-size: 1.7rem;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  .home {
-    .profile {
       .imageContainer {
+        display: flex;
+        justify-content: center;
         .profileImage {
-          height: 70rem;
-          width: 70rem;
-        }
-      }
-      .summary {
-        .intro {
-          font-size: 15rem;
-        }
-        .role {
-          font-size: 4.2rem;
-        }
-        .detail {
-          font-size: 3rem;
+          height: 28rem;
+          width: 28rem;
         }
       }
     }
@@ -128,37 +202,13 @@
     .profile {
       .imageContainer {
         .profileImage {
-          height: 30rem;
-          width: 30rem;
+          height: 22rem;
+          width: 22rem;
         }
       }
       .summary {
         .intro {
-          font-size: 5rem;
-        }
-        .role {
-          font-size: 2rem;
-        }
-        .detail {
-          font-size: 1.7rem;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 300px) {
-  .home {
-    .profile {
-      .imageContainer {
-        .profileImage {
-          height: 15rem;
-          width: 15rem;
-        }
-      }
-      .summary {
-        .intro {
-          font-size: 3rem;
+          font-size: 2.2rem;
         }
         .role {
           font-size: 1.2rem;
@@ -168,7 +218,31 @@
         }
         .contactIcons {
           gap: 1.5rem;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .home {
+    .profile {
+      .imageContainer {
+        .profileImage {
+          height: 18rem;
+          width: 18rem;
+        }
+      }
+      .summary {
+        .intro {
+          font-size: 1.8rem;
+        }
+        .role {
           font-size: 1rem;
+        }
+        .detail {
+          font-size: 0.95rem;
         }
       }
     }

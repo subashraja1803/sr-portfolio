@@ -25,7 +25,9 @@ export const experienceDetails = [
     timePeriod: "05/2025 – Present",
     location: "Chennai",
     description: [
-      "Contributed to development of SHOP CMS which is an internal tool in Samsung particularly designed to manage contents in Samsung Mobile Shop App across various country stores",
+      "Developed SHOP CMS, an internal tool for Samsung Mobile Shop Apps, enabling content management across multiple countries.",
+      "Built the Flagship UAT Dashboard from the ground up to streamline test case result updates for the Samsung SHOP App across diverse SKUs. Explored and implemented multiple bundling tools to optimize application bundle size and improve performance.",
+      "Wrote and implemented deployment automation scripts, user creation automation scripts, and additional automation tools for SPA environments, improving operational efficiency and reducing manual workload.",
     ],
   },
   {

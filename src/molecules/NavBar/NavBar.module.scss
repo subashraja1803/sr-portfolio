@@ -1,62 +1,115 @@
 .navBar {
-  padding: 2rem;
-  padding-left: 3rem;
+  padding: 1.5rem 2rem;
   position: fixed;
-  height: 5rem;
+  top: 0;
+  left: 0;
   width: 100%;
-  font-size: 4rem;
+  height: auto;
+  font-size: 2rem;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.95) 0%,
+    rgba(15, 23, 42, 0.8) 100%
+  );
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   .menuIcon {
-    color: rgb(229, 227, 232);
+    color: #00d9ff;
     font-weight: bolder;
     cursor: pointer;
+    transition: all 0.3s ease;
+
     &:hover {
-      box-shadow: 0 0 2.5rem #cccacfb8;
+      color: #ffffff;
+      filter: drop-shadow(0 0 8px rgba(0, 217, 255, 0.5));
+      transform: scale(1.1);
     }
   }
 }
 
 .navDrawer {
   color: white;
+
   :global([class*="ant-drawer-body"]) {
-    background-color: #362854f9;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    padding: 0 !important;
   }
+
+  :global([class*="ant-drawer-header"]) {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+  }
+
+  :global([class*="ant-drawer-close"]) {
+    color: #00d9ff;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+
   .topContainer {
     height: 2rem;
     position: relative;
+    padding: 1.5rem;
+
     .closeIcon {
       position: absolute;
-      right: 0rem;
-      font-size: 2rem;
+      right: 1.5rem;
+      top: 1.5rem;
+      font-size: 1.5rem;
       cursor: pointer;
+      color: #00d9ff;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #ffffff;
+        transform: scale(1.2);
+      }
     }
   }
+
   .navItems {
-    padding-top: 3rem;
+    padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    align-items: stretch;
+    gap: 0;
+
     .navItem {
       text-align: center;
       width: 100%;
-      height: 4rem;
-      font-size: 2rem;
-      border-radius: 1rem;
+      padding: 1.2rem 1.5rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+      border-radius: 8px;
       cursor: pointer;
+      margin: 0.5rem 0;
+      background: transparent;
+      color: #cbd5e1;
+      transition: all 0.3s ease;
+
       &:hover {
-        --navItemColor: #d3dadecc;
-        color: rgb(241, 238, 238);
-        box-shadow: 0 0 2.5rem var(--navItemColor), 0 0 5rem var(--navItemColor);
-        background: rgba(112, 102, 148, 0.433);
+        --navItemColor: #00d9ff;
+        color: #ffffff;
+        background: rgba(0, 217, 255, 0.1);
+        border-left: 3px solid #00d9ff;
+        padding-left: calc(1.5rem - 3px);
+        box-shadow: 0 0 15px rgba(0, 217, 255, 0.2);
       }
     }
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .navBar {
-    padding-left: 3rem;
-    height: 3rem;
-    font-size: 2rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.8rem;
+    height: auto;
   }
 }
